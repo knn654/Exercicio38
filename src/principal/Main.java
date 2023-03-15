@@ -13,7 +13,7 @@ public class Main {
 		semaforo = new Semaphore(maxCorredoresPorta);
 		
 		for (int i = 0; i < totalCorredores; i++) {
-			Thread corredores = new iniciarCorrida (i, semaforo);
+			Thread corredores = new Threads(i, semaforo);
 			corredores.start();
 		}
 	}
